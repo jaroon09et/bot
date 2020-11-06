@@ -1,4 +1,7 @@
 ({ })
+$ heroku buildpacks:set heroku/php
+$ heroku create myapp --buildpack heroku/php
+$heroku buildpacks:set heroku/ruby
 $ git push heroku master
    ----->PHP app detected
 $ COMPOSER_MEMORY_LIMIT 
