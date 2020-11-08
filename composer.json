@@ -43,9 +43,11 @@ opcache.memory_consumption=128
 opcache.interned_strings_buffer=8
 opcache.max_accelerated_files=4000
 
-
 {
-  "require": {
-    "php": "^7.2.0"
-  }
+   "require": {
+       "php": "^7.1.0"
+   }
 }
+
+
+ 
