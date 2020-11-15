@@ -18,6 +18,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
         $reply_message = '';
         $reply_token = $event['replyToken'];
+         http_response_code(200);
 
 
         $data = [
