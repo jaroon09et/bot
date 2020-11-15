@@ -1,53 +1,8 @@
-({ })
-
-
-$ echo '{}' > composer.json
-$ git add composer.json
-$ git commit -m "add composer.json for PHP app detection"
-
-
-$ heroku buildpacks:set heroku/php
-
-
-$ heroku buildpacks:set https://github.com/heroku/heroku-buildpack-php
-
-$ heroku buildpacks:set heroku/php
-$ heroku create myapp --buildpack heroku/php
-$heroku buildpacks:set heroku/ruby
-$ git push heroku master
-   ----->PHP app detected
-$ COMPOSER_MEMORY_LIMIT 
-     dyno
-
-$ COMPOSER_MIRROR_PATH_REPOS
-     1;
-$ COMPOSER_NO_INTERACTION
-     1;
-$ COMPOSER_PROCESS_TIMEOUT
-     0;
-$ PHP Redis(redis)
-$ composer compil --no-dev --no-in teraction
-
-date.timezone = UTC
-error_reporting =E_ALL & ~E_STRICT
-expose_php = Off
-session.sid_length=32
-short_open_tag=On
-user_ini.cache_ttl= 86400
-variables_order=EGPCS
-
-
-opcache.enable_cli = 1
-opcache.validate_timestamps = 0
-opcache.memory_consumption=128
-opcache.interned_strings_buffer=8
-opcache.max_accelerated_files=4000
 
 {
-   "require": {
-       "php": "^7.1.0"
-   }
+    "autoload": {
+        "psr-4": {"Acme\\": "src/"}
+    }
 }
-
 
  
