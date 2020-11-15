@@ -35,6 +35,11 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 echo "OK";
 
+require __DIR__ . '/vendor/autoload.php';
+
+$log = new Monolog\Logger('name');
+$log->pushHandler(new Monolog\Handler\StreamHandler('app.log', Monolog\Logger::WARNING));
+$log->addWarning('Foo');
 
 
 
