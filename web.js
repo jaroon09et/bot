@@ -5,14 +5,15 @@ cd app
 
 
 curl http://nodejs.org/dist/v0.10.20/node-v0.10.20-linux-x64.tar.gz | tar xzv
-
+buildpack: https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz
+       
 
 // Load the http module to create an http server
 var http = require('http');
 
 // Configure HTTP server to respond with Hello World to all requests
 var server = http.createServer(function (request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.writeHead(3000, {"Content-Type": "text/plain"});
   response.end("Hello World\n");
 });
 
